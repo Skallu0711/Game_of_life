@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gol.Controller">
+   <children>
+      <Canvas fx:id="canvas" height="400.0" layoutX="1.0" width="400.0" />
+      <AnchorPane layoutX="401.0" prefHeight="400.0" prefWidth="200.0" styleClass="menuPane" stylesheets="@style.css">
+         <children>
+            <Button fx:id="nextMoveButton" layoutX="63.0" layoutY="105.0" mnemonicParsing="false" onAction="#nextMove" prefHeight="38.0" prefWidth="80.0" text="Next move" />
+            <Button fx:id="clearButton" layoutX="63.0" layoutY="162.0" mnemonicParsing="false" onAction="#clear" prefHeight="38.0" prefWidth="80.0" text="Clear" />
+            <VBox layoutX="53.0" layoutY="234.0" prefHeight="55.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="105.0" text="Select Mode:" textAlignment="CENTER" />
+                  <RadioButton fx:id="drawModeButton" mnemonicParsing="false" onAction="#drawMode" text="DrawMode" />
+                  <RadioButton fx:id="eraseModeButton" mnemonicParsing="false" onAction="#eraseMode" text="EraseMode" />
+               </children>
+            </VBox>
+            <Label fx:id="aliveCounter" layoutX="14.0" layoutY="378.0" text="alive: 0" />
+            <Label fx:id="coordinates" layoutX="153.0" layoutY="378.0" text="x: , y: " />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
